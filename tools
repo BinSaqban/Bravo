@@ -1,0 +1,12 @@
+# deps (very abbreviated; Chromium's script will fetch the rest)
+sudo apt update && sudo apt install -y git python3 build-essential curl lsb-release
+
+# depot_tools
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+echo 'export PATH="$PWD/depot_tools:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+# fetch Chromium
+mkdir -p ~/chromium && cd ~/chromium
+fetch --nohooks chromium
+gclient runhooks
