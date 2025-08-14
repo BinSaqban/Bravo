@@ -1,0 +1,14 @@
+is_official_build = true           # enables more hardening + optimizations
+is_debug = false
+symbol_level = 0
+is_component_build = false
+use_lld = true
+use_thin_lto = true
+is_cfi = true                      # Control-Flow Integrity
+enable_nacl = false                # NaCl is deprecated
+blink_symbol_level = 0
+fieldtrial_testing_like_official_build = true
+
+# Optional: smaller binary, faster startup
+enable_widevine = false
+rtc_use_h264 = false
